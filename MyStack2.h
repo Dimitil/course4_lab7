@@ -29,7 +29,7 @@ class MyStack2 {
 public:
 	MyStack2() {}
 
-	MyStack2(const MyStack2<T>& other) : m_size(other.m_size)//конструктор копирующий
+	MyStack2(const MyStack2<T>& other) : m_size(other.m_size)//ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЄГ®ГЇГЁГ°ГіГѕГ№ГЁГ©
 	{
 		Node <T>* otherIt = other.m_Head.m_pNext;
 		Node<T>* it = &m_Head;
@@ -39,7 +39,7 @@ public:
 		}
 	}
 
-	MyStack2(MyStack2&& other) :m_size(other.m_size)//конструктор перемещающий
+	MyStack2(MyStack2&& other) :m_size(other.m_size)//ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГҐГ°ГҐГ¬ГҐГ№Г ГѕГ№ГЁГ©
 	{
 		m_Head.m_pNext = other.m_Head.m_pNext;
 		other.m_Head.m_pNext = nullptr;
@@ -59,7 +59,7 @@ public:
 	}
 
 
-	MyStack2& operator=(MyStack2&& other) //оператор перемещения
+	MyStack2& operator=(MyStack2&& other) //Г®ГЇГҐГ°Г ГІГ®Г° ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГї
 	{
 		if (this == &other) { return *this; }
 
@@ -72,7 +72,7 @@ public:
 
 	}
 
-	MyStack2& operator=(const MyStack2& other) //оператор присваивания
+	MyStack2& operator=(const MyStack2& other) //Г®ГЇГҐГ°Г ГІГ®Г° ГЇГ°ГЁГ±ГўГ ГЁГўГ Г­ГЁГї
 	{
 		if (this == &other) { return *this; }
 		
@@ -109,7 +109,7 @@ public:
 			Node <T>* tmp = m_Head.m_pNext;
 			m_Head.m_pNext = tmp->m_pNext;
 			delete tmp;
-            tmp = nullptr;
+			tmp = nullptr;
 		}
 	}
 
