@@ -109,6 +109,7 @@ public:
 			Node <T>* tmp = m_Head.m_pNext;
 			m_Head.m_pNext = tmp->m_pNext;
 			delete tmp;
+            tmp = nullptr;
 		}
 	}
 
